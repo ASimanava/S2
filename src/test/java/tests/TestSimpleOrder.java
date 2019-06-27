@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import pageObjects.*;
 import tests.TestInit;
 
@@ -11,6 +12,7 @@ public class TestSimpleOrder extends TestInit {
 
     @Test
     public void chooseArtikle() {
+        WebDriver browser = getBrowser();
         LoginPage loginPage = new LoginPage(browser);
         DashboardPage dashboardPage = loginPage.login();
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Suite" parallel="tests">
+    <listeners>
+        <listener class-name="tools.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="TestLoginFF" thread-count="1" parallel="methods">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.TestLogin"/>
+        </classes>
+    </test>
+    <test name="TestLoginChrome" thread-count="1" parallel="methods">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.TestLogin"/>
+        </classes>
+    </test>
+
+</suite>

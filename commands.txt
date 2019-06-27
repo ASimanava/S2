@@ -1,0 +1,5 @@
+
+java -jar selenium-server-standalone-3.141.0.jar -port 4444 -role hub
+указываем на каком порту запускаем процесс. hub -сервер
+java -Dwebdriver.chrome.driver=C:\Users\alena.simanava\IdeaProjects\work\S2\src\resources\chromedriver_win.exe -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register -port 4445 -maxSession 20 -browser browserName=chrome,maxInstances=20,platform=WINDOWS
+у node и у hub должны быть разные порты

@@ -11,18 +11,14 @@ import java.util.List;
 
 public class SupplierCatalogPage extends DriverHolder {
 
-    public SupplierCatalogPage(WebDriver browser) {super(browser);}   //super why?
-
+    public SupplierCatalogPage(WebDriver browser) {super(browser);}
     public WebElement getSupplierCatalogTable() {
         return browser.findElement(By.xpath("//table[@id='DataTables_Table_0']"));
     }
-
     public List<WebElement> getArticles() {
         return browser.findElements(By.xpath("//tbody[@id='items']/tr"));
     }
-
     public WebElement getBasket() {
-
         return browser.findElement(By.xpath("//a[@id='icon-shopping-cart-place']"));
     }
     public BasketPage goBasketPage() {

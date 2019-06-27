@@ -1,6 +1,7 @@
 package tests;
 
-import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 import pageObjects.DashboardPage;
 import pageObjects.LoginPage;
 
@@ -10,14 +11,16 @@ public class TestLogin extends TestInit {
 
     @Test
     public void LoginCorrect() {
+        WebDriver browser = getBrowser();
         LoginPage loginPage = new LoginPage(browser);
         DashboardPage dashboardPage = loginPage.login();
 
-        assertTrue(loginPage.getUrl().equals("https://dev.simplesystem.com/dashboard"));
+        assertTrue(loginPage.getUrl().equals("https://www.test.s2/dashboard"));
     }
 
     @Test
     public void LoginIncorrect() {
+        WebDriver browser = getBrowser();
         LoginPage loginPage = new LoginPage(browser);
         loginPage.onProject();
         loginPage.getUserName().sendKeys("S2");

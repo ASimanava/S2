@@ -10,6 +10,7 @@ import org.junit.runners.Suite;
         TestSimpleOrder.class,
         TestAddCoreProduct.class,
         TestDeleteCoreProduct.class,
+        TestFavouriteList.class,
 } )
 
 public class TestRunner {

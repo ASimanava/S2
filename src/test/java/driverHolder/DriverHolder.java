@@ -12,22 +12,19 @@ import java.util.Properties;
 
 public class DriverHolder {
     public WebDriver browser;
-
     public DriverHolder(WebDriver browser) {
         this.browser = browser;
     }
-
     public void onProject() {
-        browser.get("https://dev.simplesystem.com/signin");
+        browser.get("https://www.simplesystem.com/signin");
     }
-
     public WebElement findElementByXpath(String xpath) {
         return new WebDriverWait(browser,10).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
     }
+
+
     public String url;
     public String companyid;
-
-
     public void setConfig() {
         Properties prop = new Properties();
         InputStream input = null;

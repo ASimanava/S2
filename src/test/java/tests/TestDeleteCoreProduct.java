@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import pageObjects.CoreProductPage;
 import pageObjects.DashboardPage;
 import pageObjects.FavouritesPage;
@@ -14,6 +15,7 @@ public class TestDeleteCoreProduct  extends TestInit {
 
     @Test
     public void deleteCoreProduct() {
+        WebDriver browser = getBrowser();
         LoginPage loginPage = new LoginPage(browser);
         DashboardPage dashboardPage = loginPage.login();
         FavouritesPage favouritesPage = dashboardPage.goFavouritesPage();
@@ -30,7 +32,6 @@ public class TestDeleteCoreProduct  extends TestInit {
         assertTrue((countNew-1)==(count-1));
         System.out.println("Count before"+(count));
         System.out.println("Count after"+(countNew-1));
-
 
     }
 }
